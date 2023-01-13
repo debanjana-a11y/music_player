@@ -20,120 +20,137 @@ body {
 }
 
 .card1 {
-    position: relative;
-    background-color: hsla(0, 100%, 10%, 0.3);
-    top:5rem;
-    left: 10rem;
-    height: 200px;
-    width: 400px;
-    border-radius: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3em;
-    font-style: italic;
-    color: white;
+	position: relative;
+	background-color: hsla(0, 100%, 10%, 0.3);
+	top: 5rem;
+	left: 10rem;
+	height: 200px;
+	width: 400px;
+	border-radius: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3em;
+	font-style: italic;
+	color: white;
 }
 
 .card2 {
-    position: relative;
-    background-color: hsla(0, 100%, 10%, 0.1);
-    left: 25rem;
-    height: 100px;
-    width: 200px;
-    border-radius: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-style: italic;
-    color: white;
-    z-index: 1;
+	position: relative;
+	background-color: hsla(0, 100%, 10%, 0.1);
+	left: 25rem;
+	height: 100px;
+	width: 200px;
+	border-radius: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	font-style: italic;
+	color: white;
+	z-index: 1;
 }
 
 .card3 {
-    position: relative;
-    background-color: hsla(0, 100%, 10%, 0.3);
-    top: -5rem;
-    left: 25rem;
-    height: 300px;
-    width: 400px;
-    border-radius: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    color: white;
+	position: relative;
+	background-color: hsla(0, 100%, 10%, 0.3);
+	top: -5rem;
+	left: 25rem;
+	height: 300px;
+	width: 400px;
+	border-radius: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	color: white;
 }
 
 .toplist {
-    list-style: none;
+	list-style: none;
 }
 
 .toplist > li {
-    padding: 2px;
-} 
+	padding: 2px;
+}
 
-.picture1, .picture2 {
-    position: absolute;
-    height: 200px;
-    border-radius: 50%;
+.picture1,
+.picture2 {
+	position: absolute;
+	height: 30vmin;
+	border-radius: 50%;
 }
 
 .picture1 {
-    top: 15rem;
-    left: 15rem;
+	top: 15rem;
+	left: 15rem;
 }
 
 .picture2 {
-    top: 25rem;
-    left: 15rem;
-    z-index: 1;
+	top: 25rem;
+	left: 15rem;
 }
 
 .playArea {
-    position: relative;
-    height: 100px;
-    width: 100%;
-    background-color: hsla(0, 10%, 10%, 0.5);
+	position: relative;
+	height: 100px;
+	width: 100%;
+	background-color: hsla(0, 10%, 10%, 0.5);
 }
 
 @media screen and (max-width: 800px) {
 	.content {
 		background-position: right;
-        background-size: cover;
+		background-size: cover;
 	}
 }
 
 @media screen and (max-width: 920px) {
-    .content {
-        padding: 2em;
+	.content {
+		padding: 2em;
 		display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: 1px solid red;
+		flex-direction: column;
+		align-items: center;
+		border: 1px solid red;
 	}
 	.card1 {
-        position: static;
-        width: 100%;
-        height: 200px;
-        border-radius: 0%;
-        left: 0;
+		position: static;
+		width: 100%;
+		height: 200px;
+		border-radius: 0%;
+		left: 0;
 	}
-    .card2 {
-        /* position: static; */
-        width: 100%;
-        height: 30px;
-        border-radius: 0%;
-        left: 0;
+	.card2 {
+		width: 100%;
+		height: 30px;
+		border-radius: 0%;
+		left: 0;
 	}
-    .card3 {
-        position: static;
-        width: 100%;
-        height: auto;
-        border-radius: 0%;
-        left: 0;
-        flex-grow: 1;
+	.card3 {
+		position: static;
+		width: 100%;
+		height: auto;
+		border-radius: 0%;
+		left: 0;
+		flex-grow: 1;
+	}
+
+	.picture1, .picture2 {
+		opacity: 0.3;
+		left: 3rem;
+	}
+
+	.picture2 {
+		opacity: 0.3;
+		top: 25rem;
 	}
 }
 
+@media screen and (max-width: 400px) {
+    .card1, .card2, .card3 {
+        font-size:
+	}
+    .picture1, .picture2 {
+        display: none;
+    }
+}
