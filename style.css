@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+}
+
+html, body {
+    height: 100vh;
+}
+
+.content {
+    min-height: 100%;
+    background-color: black;
+    background-image: url('./images/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card1 {
+    position: relative;
+    background-color: hsla(0, 100%, 10%, 0.3);
+    top:5rem;
+    left: 10rem;
+    height: 200px;
+    width: 400px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-style: italic;
+    color: white;
+}
+
+.card2 {
+    position: relative;
+    background-color: hsla(0, 100%, 10%, 0.1);
+    /* top: -3rem; */
+    left: 25rem;
+    height: 100px;
+    width: 200px;
+    border-radius: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-style: italic;
+    color: white;
+    z-index: 1;
+}
+
+.card3 {
+    position: relative;
+    background-color: hsla(0, 100%, 10%, 0.3);
+    top: -5rem;
+    left: 25rem;
+    height: 300px;
+    width: 400px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+}
+
+.toplist {
+    list-style: none;
+}
+
+.toplist > li {
+    padding: 2px;
+} 
+
+.picture1, .picture2 {
+    position: absolute;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.picture1 {
+    top: 15rem;
+    left: 15rem;
+}
+
+.picture2 {
+    top: 25rem;
+    left: 15rem;
+    z-index: 1;
+}
+
+.playArea {
+    height: 100px;
+    width: 100%;
+    background-color: hsla(0, 10%, 10%, 0.5);
+}
