@@ -93,9 +93,24 @@ body {
 
 .playArea {
 	position: relative;
-	height: 100px;
+	height: 200px;
 	width: 100%;
 	background-color: hsla(0, 10%, 10%, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.action-btn, .action-btn-big {
+	border: none;
+	font-size: 1em;
+	background: transparent;
+	color: white;
+	cursor: pointer;
+}
+
+.action-btn-big {
+	font-size: 2em;
 }
 
 @media screen and (max-width: 800px) {
