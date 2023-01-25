@@ -1,6 +1,6 @@
 # Arianator's Music Player
 
-A music player dedicated to pop singer Ariana Grande and her popular songs. 
+A music player dedicated to pop singer Ariana Grande and her popular songs. See it <a href='https://debanjana-a11y.github.io/music_player/'>live</a> here.
 
 ![image](https://user-images.githubusercontent.com/89571066/214504893-ecb1b377-bfa9-4a8a-a92f-16b73f51e5ca.png)
 
