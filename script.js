@@ -72,6 +72,19 @@ nextBtn.addEventListener('click', () => {
     currentSongUl.classList.add('playing');
  }
 
+function selectMusic() {
+  stopMusic();
+
+  let li = event.target.closest("li");
+  let nodes = Array.from(songList.children);
+  nodes = Array.from(li.closest("ul").children);
+  let index = nodes.indexOf(li);
+  updateMusic(index);
+
+  //   music = new Audio(`./audio/${event.target.innerText}.mp3`);
+
+  startMusic();
+}
 
 
  

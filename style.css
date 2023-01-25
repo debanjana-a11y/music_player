@@ -74,6 +74,10 @@ body {
 	padding: 2px;
 }
 
+li span:hover {
+	cursor: pointer;
+}
+
 .picture1,
 .picture2 {
 	position: absolute;
@@ -173,7 +177,7 @@ body {
 	.card1,
 	.card2,
 	.card3 {
-		font-size: ;
+		font-size: 1rem;
 	}
 	.picture1,
 	.picture2 {
