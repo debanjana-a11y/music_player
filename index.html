@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Music Player</title>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
-		<link rel="stylesheet" href="style.css" />
-		<script src="./script.js" defer></script>
-	</head>
-	<body>
-		<div class="content">
-			<div class="card1">Ariana Grande</div>
-			<div class="card2">Top Songs</div>
-			<div class="card3">
-				<ul class="songlist">
-					<li>7 Rings</li>
-					<li>Thank U, Next</li>
-					<li>One Last Time</li>
-					<li>Stuck With You</li>
-					<li>Dangerous Woman</li>
-				</ul>
-			</div>
-			<img class="picture1" src="./images/pic1.jpg" alt="Picture 1 of Ariana" />
-			<img class="picture2" src="./images/pic2.jpg" alt="Picture 2 of Ariana" />
-			<div class="playArea">
-				<button id="prev" class="action-btn">
-					<i class="fas fa-backward"></i>
-				</button>
-				<button id="play" class="action-btn-big">
-					<i class="fas fa-play"></i>
-				</button>
-				<button id="next" class="action-btn">
-					<i class="fas fa-forward"></i>
-				</button>
-			</div>
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="card1">Ariana Grande</div>
+      <div class="card2">Top Songs</div>
+      <div class="card3">
+        <ul class="songlist">
+          <li onclick="selectMusic()"><span>7 Rings</span></li>
+          <li onclick="selectMusic()"><span>Thank U, Next</span></li>
+          <li onclick="selectMusic()"><span>One Last Time</span></li>
+          <li onclick="selectMusic()"><span>Stuck With You</span></li>
+          <li onclick="selectMusic()"><span>Dangerous Woman</span></li>
+        </ul>
+      </div>
+      <img class="picture1" src="./images/pic1.jpg" alt="Picture 1 of Ariana" />
+      <img class="picture2" src="./images/pic2.jpg" alt="Picture 2 of Ariana" />
+      <div class="playArea">
+        <div class="buttons">
+          <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play" class="action-btn-big">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+          </button>
+        </div>
+        <div class="progress">
+          <div class="progressBar" id="progressBar">
+            <div class="progressed" id="progressed"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
