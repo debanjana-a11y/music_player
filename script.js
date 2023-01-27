@@ -80,13 +80,9 @@ function updateMusic(index) {
 function selectMusic() {
   stopMusic();
 
-  let li = event.target.closest("li");
-  let nodes = Array.from(songList.children);
-  nodes = Array.from(li.closest("ul").children);
-  let index = nodes.indexOf(li);
+  let nodes = Array.from(this.event.target.closest("ul").children);
+  let index = nodes.indexOf(this.event.target.closest("li"));
   updateMusic(index);
-
-  //   music = new Audio(`./audio/${event.target.innerText}.mp3`);
 
   startMusic();
 }
