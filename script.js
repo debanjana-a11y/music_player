@@ -4,12 +4,17 @@ const nextBtn = document.getElementById("next");
 const songList = document.querySelector("ul");
 const progressed = document.getElementById("progressed");
 const progressBar = document.getElementById("progressBar");
+const timeWatched = document.querySelector('.time-watched');
+const totalTime = document.querySelector('.total-time');
 
+timeWatched.innerText = "--:--";
+totalTime.innerText = "--:--";
 let index = 0;
 let currentSongUl = undefined;
 let currentSongName = undefined;
 let music = undefined;
 updateMusic(0);
+
 
 playBtn.addEventListener("click", () => {
   if (isPlaying()) stopMusic();
@@ -41,6 +46,10 @@ function startMusic() {
   playBtn.querySelector("i").classList.add("fa-pause");
   music.ontimeupdate = function (e) {
     progressed.style.width = (music.currentTime * 100) / music.duration + "%";
+    let minTimeWatched = ((music.currentTime) / 60);
+    let minTotalDuration = (music.duration) / 60;
+    timeWatched.innerText = minTimeWatched.toFixed(2).padStart(2, "0").replace('.', ':');
+    totalTime.innerText = minTotalDuration.toFixed(2).padStart(2, "0").replace('.', ':');
   };
   progressBar.onclick = function (e) {
     music.currentTime = (e.offsetX / progressBar.offsetWidth) * music.duration;

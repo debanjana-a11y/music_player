@@ -116,6 +116,7 @@ li span:hover {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  color: #fff;
 }
 
 .progressBar {
