@@ -8,13 +8,13 @@ Features available:
 <ol>
   <li>Play and Pause Music</li>
   <li>Back and Forth Music in the list</li>
+  <li>Play Music on click on Somg name</li>
+  <li>When Music ends, auto play next one in Queue</li>
 </ol>
 
 Features to work on:
 <ol>
-  <li>Play Music on click on Somg name</li>
   <li>Display time progress bar</li>
   <li>Upload new songs</li>
-  <li>When Music ends, auto play next one in Queue</li>
   <li>Better mobile view</li>
 </ol>
