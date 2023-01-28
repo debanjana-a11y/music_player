@@ -46,8 +46,8 @@ function startMusic() {
   playBtn.querySelector("i").classList.add("fa-pause");
   music.ontimeupdate = function (e) {
     progressed.style.width = (music.currentTime * 100) / music.duration + "%";
-    let minTimeWatched = ((music.currentTime) / 60);
-    let minTotalDuration = (music.duration) / 60;
+    let minTimeWatched = ((music.currentTime) / 100);
+    let minTotalDuration = (music.duration) / 100;
     timeWatched.innerText = minTimeWatched.toFixed(2).padStart(2, "0").replace('.', ':');
     totalTime.innerText = minTotalDuration.toFixed(2).padStart(2, "0").replace('.', ':');
   };
