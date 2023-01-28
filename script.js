@@ -73,6 +73,7 @@ function updateMusic(index) {
   currentSongUl = songList.children[index];
   currentSongName = currentSongUl.innerText;
   music = new Audio(`./audio/${currentSongName}.mp3`);
+  music.addEventListener("ended", playForward);
 
   currentSongUl.classList.add("playing");
 }
@@ -81,7 +82,7 @@ function selectMusic() {
   stopMusic();
 
   let nodes = Array.from(this.event.target.closest("ul").children);
-  let index = nodes.indexOf(this.event.target.closest("li"));
+  index = nodes.indexOf(this.event.target.closest("li"));
   updateMusic(index);
 
   startMusic();
