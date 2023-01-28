@@ -6,6 +6,7 @@ const progressed = document.getElementById("progressed");
 const progressBar = document.getElementById("progressBar");
 const timeWatched = document.querySelector('.time-watched');
 const totalTime = document.querySelector('.total-time');
+const picture2 = document.querySelector('.picture2');
 
 timeWatched.innerText = "--:--";
 totalTime.innerText = "--:--";
@@ -46,10 +47,20 @@ function startMusic() {
   playBtn.querySelector("i").classList.add("fa-pause");
   music.ontimeupdate = function (e) {
     progressed.style.width = (music.currentTime * 100) / music.duration + "%";
-    let minTimeWatched = ((music.currentTime) / 100);
-    let minTotalDuration = (music.duration) / 100;
-    timeWatched.innerText = minTimeWatched.toFixed(2).padStart(2, "0").replace('.', ':');
-    totalTime.innerText = minTotalDuration.toFixed(2).padStart(2, "0").replace('.', ':');
+     
+    let totalMinutes = Math.floor((music.duration) / 60);
+    let totalSeconds = ((music.duration) % 60);
+    let watchedMinutes = Math.floor((music.currentTime) / 60);
+    let watchedSeconds = ((music.currentTime) % 60);
+
+    function to2Digits(num){
+      return (num.toString().padStart(2, '0'));
+    }
+    let timeWatchedSeconds = (to2Digits(watchedSeconds).split('.')[0]).padStart(2, '0');
+    let totalTimeSeconds = (to2Digits(totalSeconds).split('.')[0]).padStart(2, '0');
+    timeWatched.innerText = `${to2Digits(watchedMinutes)}: ${timeWatchedSeconds}`;
+    totalTime.innerText = `${to2Digits(totalMinutes)}:${totalTimeSeconds}`
+
   };
   progressBar.onclick = function (e) {
     music.currentTime = (e.offsetX / progressBar.offsetWidth) * music.duration;

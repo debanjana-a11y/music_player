@@ -8,14 +8,12 @@
 html,
 body {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-  min-height: 100%;
-  background-color: black;
-  background-image: url("./images/bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background:#000000 url('./images/bg.jpg') no-repeat center;
   background-size: cover;
 }
 
@@ -24,8 +22,9 @@ body {
   background-color: hsla(0, 100%, 10%, 0.3);
   top: 5rem;
   left: 10rem;
-  height: 200px;
-  width: 400px;
+  width: max-content;
+  height: fit-content;
+  padding: 30px 40px;
   border-radius: 20%;
   display: flex;
   align-items: center;
@@ -49,6 +48,7 @@ body {
   font-style: italic;
   color: white;
   z-index: 1;
+  margin: 20px -20px;
 }
 
 .card3 {
@@ -56,8 +56,9 @@ body {
   background-color: hsla(0, 100%, 10%, 0.3);
   top: -5rem;
   left: 25rem;
-  height: 300px;
-  width: 400px;
+  height: max-content;
+  width: fit-content;
+  padding: 30px;
   border-radius: 20%;
   display: flex;
   align-items: center;
@@ -86,18 +87,19 @@ li span:hover {
 }
 
 .picture1 {
-  top: 15rem;
+  top: 10rem;
   left: 15rem;
 }
 
 .picture2 {
-  top: 25rem;
+  top: 20rem;
   left: 15rem;
 }
 
 .playArea {
+  margin-top: auto;
   position: relative;
-  height: 250px;
+  height: 150px;
   width: 100%;
   background-color: hsla(0, 10%, 10%, 0.5);
   display: flex;
@@ -162,7 +164,6 @@ li span:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
   }
   .card1 {
     position: static;
