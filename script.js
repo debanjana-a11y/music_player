@@ -58,7 +58,7 @@ function startMusic() {
     }
     let timeWatchedSeconds = (to2Digits(watchedSeconds).split('.')[0]).padStart(2, '0');
     let totalTimeSeconds = (to2Digits(totalSeconds).split('.')[0]).padStart(2, '0');
-    timeWatched.innerText = `${to2Digits(watchedMinutes)}: ${timeWatchedSeconds}`;
+    timeWatched.innerText = `${to2Digits(watchedMinutes)}:${timeWatchedSeconds}`;
     totalTime.innerText = `${to2Digits(totalMinutes)}:${totalTimeSeconds}`
 
   };
