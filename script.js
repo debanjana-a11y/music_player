@@ -4,7 +4,7 @@ const nextBtn = document.getElementById("next");
 const songList = document.querySelector("ul");
 const progressed = document.getElementById("progressed");
 const progressBar = document.getElementById("progressBar");
-const timeWatched = document.querySelector('.time-watched');
+const timeWatched = document.querySelector('.watched-time');
 const totalTime = document.querySelector('.total-time');
 const picture2 = document.querySelector('.picture2');
 

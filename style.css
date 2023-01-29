@@ -2,69 +2,50 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 2px solid red; */
 }
 
-html,
 body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.content {
-  background:#000000 url('./images/bg.jpg') no-repeat center;
+  background: #000000 url('./images/bg.jpg') no-repeat center;
   background-size: cover;
+  align-items: center;
 }
-
-.card1 {
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+[class^='card']{
   position: relative;
-  background-color: hsla(0, 100%, 10%, 0.3);
-  top: 5rem;
-  left: 10rem;
-  width: max-content;
-  height: fit-content;
-  padding: 30px 40px;
-  border-radius: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3em;
+  color: #fff;
+  background-color: hsla(0, 100%, 10%, 0.3);
+  border-radius: 20%;
+  height: max-content;
+  width: fit-content;
+  font-size: 21px;
+}
+.card1 {
+  margin-top: 10px;
+  padding: 10px 20px;
   font-style: italic;
-  color: white;
 }
 
 .card2 {
-  position: relative;
   background-color: hsla(0, 100%, 10%, 0.1);
-  left: 25rem;
-  height: 100px;
-  width: 200px;
-  border-radius: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
+  padding: 10px 25px;
   font-style: italic;
-  color: white;
   z-index: 1;
-  margin: 20px -20px;
+  margin: -7px;
 }
 
 .card3 {
-  position: relative;
-  background-color: hsla(0, 100%, 10%, 0.3);
-  top: -5rem;
-  left: 25rem;
-  height: max-content;
-  width: fit-content;
-  padding: 30px;
-  border-radius: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  color: white;
+  padding: 20px;
+  font-size: 17px;
 }
 
 .songlist {
@@ -79,32 +60,35 @@ li span:hover {
   cursor: pointer;
 }
 
-.picture1,
-.picture2 {
-  position: absolute;
-  height: 30vmin;
-  border-radius: 50%;
-}
 [class^="picture"]{
-  left: 15rem;
+  position: absolute;
+  height: 100px;
+  border-radius: 50%;
+  z-index: -10;
 }
 .picture1 {
-  top: 10rem;
+  top: 10px;
+  right: 0;
 }
 
 .picture2 {
-  top: 20rem;
+  top: 10rem;
+  left: 0;
 }
 
 .playArea {
   margin-top: auto;
   position: relative;
-  height: 150px;
-  width: 100%;
+  height: 80px;
+  width: 100vw;
   background-color: hsla(0, 10%, 10%, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+[class$='time']{
+  font-size: 12px;
 }
 
 .buttons {
@@ -123,7 +107,7 @@ li span:hover {
 
 .progressBar {
   height: 0.5rem;
-  width: 80vw;
+  width: 60vw;
   background-color: rgb(0, 0, 0);
 }
 
@@ -136,14 +120,14 @@ li span:hover {
 .action-btn,
 .action-btn-big {
   border: none;
-  font-size: 1em;
+  font-size: 0.9em;
   background: transparent;
   color: white;
   cursor: pointer;
 }
 
 .action-btn-big {
-  font-size: 2em;
+  font-size: 1.3em;
 }
 
 .playing {
@@ -153,65 +137,3 @@ li span:hover {
 
 
 /* Media Query Section */
-
-@media screen and (max-width: 400px) {
-  [class^="card"] {
-    font-size: 1rem;
-  }
-  [class="picture"] {
-    display: none;
-  }
-}
-
-
-@media screen and (max-width: 800px) {
-  .card1{
-    left: 5rem;
-  }
-  .card2,
-  .card3{
-    left: 20rem;
-  }
-  [class^="picture"]{
-    left: 10rem;
-  }
-}
-
-@media (max-width: 690px) {
-  .card1{
-    left: 3rem;
-  }
-  .card2,
-  .card3{
-    left: 18rem;
-  }
-  [class^="picture"]{
-    left: 8rem;
-  }
-}
-
-@media (max-width: 635px){
-  .content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  [class^="card"]{
-    left: auto;
-    top: auto;
-  }
-  [class^="picture"]{
-    top: auto;
-    left: auto;
-    opacity: 0.3;
-    transform: translate(70%, 90%);
-  }
-  .picture1{
-    left: 50%;
-  }
-  .picture2{
-    right: 90%;
-  }
-}
-
