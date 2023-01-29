@@ -27,10 +27,10 @@ body {
   border-radius: 20%;
   height: max-content;
   width: fit-content;
-  font-size: 21px;
+  font-size: 32px;
 }
 .card1 {
-  margin-top: 10px;
+  margin-top: 40px;
   padding: 10px 20px;
   font-style: italic;
 }
@@ -45,7 +45,7 @@ body {
 
 .card3 {
   padding: 20px;
-  font-size: 17px;
+  font-size: 21px;
 }
 
 .songlist {
@@ -79,20 +79,23 @@ li span:hover {
 .playArea {
   margin-top: auto;
   position: relative;
-  height: 80px;
+  height: 20vh;
   width: 100vw;
   background-color: hsla(0, 10%, 10%, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+  flex: none;
 }
 
 [class$='time']{
   font-size: 12px;
+  margin:0 1em;
 }
 
 .buttons {
-  width: 100%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -137,3 +140,76 @@ li span:hover {
 
 
 /* Media Query Section */
+
+@media (min-width: 490px){
+  [class^='card']{
+    font-size: 37px;
+  }
+  .card1{
+    right: 15vw;
+  }
+  .card2{
+    right: 10vw;
+  }
+  .card3{
+    left: 8vw;
+    font-size: 27px;
+  }
+  [class^='picture']{
+    height: 200px;
+  }
+  .picture1{
+    top: 8rem;
+    right: 5rem;
+  }
+  .picture2{
+    top: 17rem;
+    left: -18rem;
+  }
+  [class$='time']{
+    font-size: 15px;
+  }
+}
+@media (min-width: 620px){
+  [class$='time']{
+    font-size: 21px;
+  }
+  .action-btn{
+    font-size: 2rem;
+  }
+  .action-btn-big{
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 900px){
+  .card3{
+    left: 3vw;
+  }
+}
+
+
+/* Height */
+
+@media (max-height: 400px){
+  .card1{
+    margin-top: 5px;
+  }
+}
+@media (max-height: 370px){
+  [class^='card']{
+    font-size: 27px;
+  }
+  .card3{
+    font-size: 17px;
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-height: 335px){
+  [class^='card']{
+    font-size: 21px;
+  }
+  .card3{
+    font-size: 13px;
+  }
+}
